@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PZo-or-EaZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="c2u-Ue-Ud4">
+            <objects>
+                <viewController id="jaw-iq-Otc" customClass="ViewController" customModule="WhatFlower" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="auM-Ds-W1G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UFN-MG-81g">
+                                <rect key="frame" x="0.0" y="88" width="414" height="278"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIU-k7-N2L">
+                                <rect key="frame" x="20" y="442" width="374" height="420"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kvv-nC-dor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kvv-nC-dor" firstAttribute="trailing" secondItem="pIU-k7-N2L" secondAttribute="trailing" constant="20" id="8hN-9q-5BM"/>
+                            <constraint firstItem="pIU-k7-N2L" firstAttribute="leading" secondItem="kvv-nC-dor" secondAttribute="leading" constant="20" id="8jC-yJ-kff"/>
+                            <constraint firstItem="UFN-MG-81g" firstAttribute="trailing" secondItem="kvv-nC-dor" secondAttribute="trailing" id="FRD-qa-rij"/>
+                            <constraint firstItem="UFN-MG-81g" firstAttribute="leading" secondItem="kvv-nC-dor" secondAttribute="leading" id="SaD-a1-C1b"/>
+                            <constraint firstItem="pIU-k7-N2L" firstAttribute="top" secondItem="UFN-MG-81g" secondAttribute="bottom" constant="76" id="WvM-0F-ghg"/>
+                            <constraint firstItem="kvv-nC-dor" firstAttribute="bottom" secondItem="UFN-MG-81g" secondAttribute="bottom" constant="496" id="caq-ix-ss9"/>
+                            <constraint firstItem="UFN-MG-81g" firstAttribute="top" secondItem="kvv-nC-dor" secondAttribute="top" id="m6z-qO-j2N"/>
+                            <constraint firstItem="pIU-k7-N2L" firstAttribute="bottom" secondItem="kvv-nC-dor" secondAttribute="bottom" id="ukv-TW-xjq"/>
+                            <constraint firstAttribute="bottom" secondItem="UFN-MG-81g" secondAttribute="bottom" id="uzQ-bG-9Rx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="x0U-6Z-OJK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="MtS-KM-NeA">
+                            <connections>
+                                <action selector="cameraTapped:" destination="jaw-iq-Otc" id="IKK-xM-rFy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ImageView" destination="UFN-MG-81g" id="iV4-5x-hAb"/>
+                        <outlet property="flowerInfoLabel" destination="pIU-k7-N2L" id="30B-fs-bjJ"/>
+                        <outlet property="imageView" destination="UFN-MG-81g" id="26Z-t1-qNd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8HE-cL-oZe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066.6666666666667" y="-191.51785714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tt8-P4-LCk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PZo-or-EaZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lyj-bx-2sV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jaw-iq-Otc" kind="relationship" relationship="rootViewController" id="gWz-Ym-Mh5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fTo-qf-Erh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="157.97101449275362" y="-191.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
